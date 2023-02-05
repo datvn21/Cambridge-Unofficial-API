@@ -43,7 +43,7 @@ const crawl = async (word, link, data) => {
       word: re,
       link:
         "https://dictionary.cambridge.org/us/dictionary/english-vietnamese/" +
-        re,
+        $(groupRecommends).text().trim().replace(" ", "-"),
     });
   });
   let wordJson = {
@@ -64,7 +64,7 @@ const crawl = async (word, link, data) => {
 app.get("/", async (req, res) => {
   res.json({
     status: "Running!",
-    howToUse: `/dict/:word`,
+    howToUse: `/dict/:word | ?useCache=true is default`,
     docs: "I'm so lazy right now 😝",
     contact: "Contact me via telegram 'Enoofzeniko' !",
     bonus: "Thanks for using it 😍",

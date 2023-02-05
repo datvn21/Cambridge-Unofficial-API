@@ -43,7 +43,7 @@ const crawl = async (word, link, data) => {
       word: re,
       link:
         "https://dictionary.cambridge.org/us/dictionary/english-vietnamese/" +
-        $(groupRecommends).text().trim().replace(" ", "-"),
+        $(groupRecommends).text().trim().replace(/ /g, "-"),
     });
   });
   let wordJson = {

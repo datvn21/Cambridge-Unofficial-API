@@ -3,7 +3,7 @@
 
 <div align="center">
   <a href="https://github.com/datvn21">
-    <img src="logoREADME.png" alt="Logo" width="80" height="80">
+    <img src="logoREADME.png" alt="Logo" width="90" height="80">
   </a>
 
   <h3 align="center">TryAgain</h3>

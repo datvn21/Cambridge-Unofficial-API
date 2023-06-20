@@ -3,7 +3,7 @@
 
 <div align="center">
   <a href="https://github.com/datvn21">
-    <img src="https://rare-gallery.com/uploads/posts/575843-Rikka-Takanashi.png" alt="Logo" width="160" height="84">
+    <img src="logoREADME.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">TryAgain</h3>

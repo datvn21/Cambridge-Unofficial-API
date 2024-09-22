@@ -5,6 +5,13 @@ const axios = require("axios");
 const NodeCache = require("node-cache");
 const wordCache = new NodeCache({ stdTTL: 0, checkperiod: 0 });
 
+const config = {
+  headers: {
+    "User-Agent":
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  },
+};
+
 router.get("/", (req, res) => {
   res.json({
     status: "Add your word 😒",
@@ -23,7 +30,7 @@ router.get("/:word", async (req, res) => {
     value = undefined;
   }
   if (value == undefined) {
-    const data = await axios.get(link).then((data) => {
+    const data = await axios.get(link, config).then((data) => {
       return data.data;
     });
     const wordJson = await crawl(word, link, data);
@@ -45,7 +52,7 @@ router.get("/audio/:word", async (req, res) => {
     value = undefined;
   }
   if (value == undefined) {
-    const dataEn = await axios.get(linkEn).then((data) => {
+    const dataEn = await axios.get(linkEn, config).then((data) => {
       return data.data;
     });
     const wordAudioEn = await crawlEn(word, linkEn, dataEn);

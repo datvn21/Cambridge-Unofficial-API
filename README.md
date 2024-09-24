@@ -12,10 +12,5 @@
     An idea mobile app help u memorize quickly your VOCABULARY 😘 
     <br />
     <br />
-    <a href="#">View Demo</a>
-    ·
-    <a href="#">App</a>
-    ·
-    <a href="#">Donate</a>
   </p>
 </div>
